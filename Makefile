@@ -1,23 +1,12 @@
-NAME	=	oui
+CC = gcc
+EXEC = pianokey
+SRC = $(wildcard src/*.c)
+OBJ = $(SRC:.c=.o)
 
-SRC	=	src/main.c	\
+all : $(EXEC)
 
-OBJ	=	$(SRC:.c=.o)
+$(EXEC) : $(OBJ)
+	$(CC) -o $(EXEC) $(OBJ)
 
-CFLAGS	+=	-Wall -Wextra -I./include -g3
-
-all:	$(NAME)
-
-$(NAME):	$(OBJ)
-	gcc -o $(NAME) $(OBJ) lib/libmy
-
-clean:
-	rm -f $(OBJ)
-
-fclean: clean
-	rm -f $(NAME)
-
-re:	fclean all
-
-auteur:
-	echo $(USER) > auteur
+clean :
+	del $(wildcard src/*.o)
