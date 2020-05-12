@@ -5,31 +5,10 @@
 ** main
 */
 
-#include "rpg.h"
+#include "my.h"
 
-void help_usage(void)
+int main (void)
 {
-    my_putstr("USAGE\n");
-    my_putstr("./game_rpg\n");
-    my_putstr("\n");
-    my_putstr("\n");
-    my_putstr("jh");
-}
-
-int main (int ac, char **av)
-{
-    srand(getpid());
-    if (ac >= 2) {
-        if (my_strcmp(av[1], "-h") == 0) {
-            help_usage();
-            return (0);
-        }
-        else
-            return (84);
-    }
-    if (ac == 1) {
-        init_game();
-        return (0);
-    }
-    return (84);
+    my_putstr("oui\n");
+    return (0);
 }

@@ -5,7 +5,7 @@
 ** nb_to_str
 */
 
-#include "rpg.h"
+#include "my.h"
 
 char *nb_to_str(int nb)
 {
