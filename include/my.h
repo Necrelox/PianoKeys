@@ -15,13 +15,14 @@
 #include <math.h>
 #include <stdio.h>
 #include <time.h>
+#include <windows.h>
 
 
 //lib
 void my_putchar(char c);
-int my_putstr(char const *str);
+void my_putstr(char const *str);
 int my_strlen(char const *str);
-int my_put_nbr(int nb);
+void my_put_nbr(int nb);
 int my_getnbr(char *str);
 int verif_if_number(char *str);
 char *my_strdup(char *str);

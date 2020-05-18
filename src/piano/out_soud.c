@@ -1,7 +1,7 @@
 /*
 ** EPITECH PROJECT, 2020
-** get_keys
+** out_soud
 ** File description:
-** get_keys
+** out_sound
 */
 

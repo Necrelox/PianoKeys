@@ -11,7 +11,7 @@ char *nb_to_str(int nb)
 {
     char *str = malloc(sizeof(*str));
     int mem = 0, i = 0, ret = 0;
-    int nb1 = nb, nb2 = nb;
+    int nb2 = nb;
 
     while (nb != 0) {
         mem++;

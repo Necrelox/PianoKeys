@@ -7,7 +7,7 @@
 
 #include "my.h"
 
-int my_putstr(char const *str)
+void my_putstr(char const *str)
 {
     for (int z = 0; str[z] ; z++)
         my_putchar(str[z]);

@@ -5,10 +5,11 @@
 ** main
 */
 
-#include "my.h"
+#include "pianokeys.h"
 
 int main (void)
 {
-    my_putstr("oui\n");
+    if (get_keys() == 84)
+        return (84);
     return (0);
 }

@@ -7,7 +7,7 @@
 
 #include "my.h"
 
-int my_put_nbr(int nb)
+void my_put_nbr(int nb)
 {
     if (nb < 0 && nb >= -2147483647) {
         nb = - nb;
@@ -19,5 +19,4 @@ int my_put_nbr(int nb)
         my_put_nbr(nb / 10);
         my_putchar((nb % 10)+ 48);
     }
-    return (0);
 }

@@ -1,6 +1,7 @@
 CC = gcc
 EXEC = pianokey
 SRC =	src/main.c	\
+		src/piano/get_keys.c	\
 		lib/my_getnbr.c	\
 		lib/my_put_nbr.c	\
 		lib/my_putstr.c	\
