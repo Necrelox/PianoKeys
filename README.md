@@ -3,8 +3,8 @@
 ## Présentation:
 
 Bienvenue sur mon projet "PianoKeys", sont but est très simple ; lorsque l'on appuie sur une touche nous aurons un sons d'une note de piano.
-C'est évidemment un programme qui ne sert à rien, hormis vous ammusez en jeu à faire de la musique.
-Evidemment on peut tout de même s'ammuser avec :) .
+C'est évidemment un programme qui ne sert à rien, hormis vous amusez en jeu à faire de la musique.
+Evidemment on peut tout de même s'amuser avec :) .
 
 ## Utilisation
 Rien de plus simple, il suffit de clone le repo ; et de double clic sur l'executable.
