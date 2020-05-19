@@ -22,7 +22,7 @@ int get_state_and_out(int nb)
 
 int get_keys(void)
 {
-    for (int out = 65; 1;) {
+    for (int out = 65; 1; Sleep(10)) {
         if (get_state_and_out(out) == 1)
             continue;
         out++;
