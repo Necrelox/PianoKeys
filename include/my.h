@@ -17,7 +17,6 @@
 #include <time.h>
 #include <windows.h>
 
-
 //lib
 void my_putchar(char c);
 void my_putstr(char const *str);

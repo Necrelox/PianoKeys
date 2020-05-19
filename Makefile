@@ -15,7 +15,7 @@ SRC =	src/main.c	\
 
 OBJ = $(SRC:.c=.o)
 
-CFLAGS += -Wall -I./include
+CFLAGS += -Wall -I./include -lwinmm
 all : $(EXEC)
 
 
