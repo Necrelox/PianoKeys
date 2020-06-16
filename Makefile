@@ -5,7 +5,7 @@ SRC =	src/main.c	\
 
 OBJ = $(SRC:.c=.o)
 
-CFLAGS += -Wall -I./include -lwinmm
+CFLAGS += -Wall -I./include
 
 clean:
 	rm -f $(OBJ)
@@ -15,4 +15,4 @@ fclean: clean
 
 re : $(EXEC)
 $(EXEC) : $(OBJ)
-	$(CC) -o $(EXEC) $(OBJ)
+	$(CC) -o $(EXEC) $(OBJ) -lwinmm

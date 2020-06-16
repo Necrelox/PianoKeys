@@ -4,7 +4,7 @@ int get_state_and_out(int nb)
 {
     if (GetAsyncKeyState(nb)) {
         printf("oui\n");
-        Beep(rand() % 500, 500);
+        PlaySound("ressources\\sound\\note_a.WAV", NULL, SND_SYNC || SND_LOOP); 
         
         return (1);
     }
@@ -17,6 +17,7 @@ int get_state_and_out(int nb)
 
 int get_keys(void)
 {
+    Sleep(2000);
     for (int out = 65; 1; Sleep(10)) {
         if (get_state_and_out(out) == 1)
             continue;
