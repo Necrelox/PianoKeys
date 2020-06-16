@@ -8,7 +8,6 @@ void random_note_played(int nb, char **soundtab)
     random = rand() % max_rand;
     sound = my_strcat("ressources\\sound\\", soundtab[random]);
     sound = my_strcat(sound, ".WAV");
-    printf("%s\n", sound);
     PlaySound(NULL, NULL, 0);
     PlaySound(sound, NULL, SND_SYNC || SND_LOOP);
     free_tab(soundtab);
@@ -42,7 +41,6 @@ int open_file(int nb)
         str = sound->d_name;
         if (strcmp("all_note.txt", str) == 0) {
             o++;
-            printf("%s\n", str);
             break;
         }
     }
