@@ -1,16 +1,11 @@
-/*
-** EPITECH PROJECT, 2020
-** get_keys
-** File description:
-** get_keys
-*/
-// 65 = a 90 = z
 #include "pianokeys.h"
 
 int get_state_and_out(int nb)
 {
     if (GetAsyncKeyState(nb)) {
         printf("oui\n");
+        Beep(rand() % 500, 500);
+        
         return (1);
     }
     if (GetAsyncKeyState(32)) {
