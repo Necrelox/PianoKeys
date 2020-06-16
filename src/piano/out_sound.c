@@ -11,6 +11,8 @@ void random_note_played(int nb, char **soundtab)
     printf("%s\n", sound);
     PlaySound(NULL, NULL, 0);
     PlaySound(sound, NULL, SND_SYNC || SND_LOOP);
+    free_tab(soundtab);
+    free(sound);
 }
 
 void read_file(int nb, char *str)
