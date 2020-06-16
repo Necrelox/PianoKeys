@@ -3,13 +3,13 @@
 int get_state_and_out(int nb)
 {
     if (GetAsyncKeyState(nb)) {
-        printf("oui\n");
-        PlaySound("ressources\\sound\\note_a.WAV", NULL, SND_SYNC || SND_LOOP); 
-        
+        if (open_file(nb) == 84)
+            return (84);
         return (1);
     }
     if (GetAsyncKeyState(32)) {
-        printf("oui\n");
+        if (open_file(nb) == 84)
+            return (84);
         return (1);
     }
     return (0);
@@ -17,13 +17,16 @@ int get_state_and_out(int nb)
 
 int get_keys(void)
 {
-    Sleep(2000);
+    Sleep(1000);
+    int key = 0;
     for (int out = 65; 1; Sleep(10)) {
-        if (get_state_and_out(out) == 1)
+        key = get_state_and_out(out);
+        if (key == 1)
             continue;
+        else if(key == 84)
+            return (84);
         out++;
         out == 91 ? out = 65 :0;
-        printf("non\n");
     }
     return (0);
 }

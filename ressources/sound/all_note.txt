@@ -1,0 +1,12 @@
+note_a
+note_b
+note_bb
+note_c
+note_cc
+note_d
+note_e
+note_eb
+note_f
+note_ff
+note_g
+note_gg

@@ -1,7 +1,11 @@
 CC = gcc
 EXEC = pianokey
 SRC =	src/main.c	\
+		src/piano/minilib/my_strcat.c	\
+		src/piano/minilib/my_strlen.c	\
+		src/piano/minilib/my_strtab.c	\
 		src/piano/get_keys.c	\
+		src/piano/out_sound.c	\
 
 OBJ = $(SRC:.c=.o)
 
