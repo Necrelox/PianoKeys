@@ -23,8 +23,13 @@ void read_file(int nb, char *str)
     int size = buff_size.st_size;
     char buff[size + 1];
     int op = open(file, O_RDONLY);
-    read(op, buff, size);
-    buff[size] = '\0';
+    ssize_t nread = read(op, buff, size);
+    if (nread > 0) {
+        buff[nread] = '\0';
+    }
+    else {
+        buff[size] = '\0';
+    }
     soundtab = my_strtab(buff, '\n');
     random_note_played(nb, soundtab);
     free (file);
