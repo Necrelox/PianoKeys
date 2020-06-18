@@ -8,8 +8,9 @@ void random_note_played(int nb, char **soundtab)
     random = rand() % max_rand;
     sound = my_strcat("ressources\\sound\\", soundtab[random]);
     sound = my_strcat(sound, ".WAV");
-    PlaySound(NULL, NULL, 0);
-    PlaySound(sound, NULL, SND_SYNC || SND_LOOP);
+    // PlaySound(NULL, NULL, 0);
+    CreateProcess()
+    PlaySound(sound, NULL, SND_NOSTOP || SND_ASYNC);
     free_tab(soundtab);
     free(sound);
 }
