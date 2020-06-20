@@ -17,7 +17,6 @@ int get_state_and_out(int nb)
 
 int get_keys(void)
 {
-    Sleep(1000);
     int key = 0;
     for (int out = 65; 1; Sleep(10)) {
         key = get_state_and_out(out);

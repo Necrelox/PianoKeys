@@ -42,7 +42,7 @@ int open_file(int nb)
     struct dirent *sound = NULL;
     repo = opendir("ressources/sound");
     char *str = NULL;
-    while (( sound = readdir(repo)) != NULL) {
+    while ((sound = readdir(repo)) != NULL) {
         str = sound->d_name;
         if (strcmp("all_note.txt", str) == 0) {
             o++;
