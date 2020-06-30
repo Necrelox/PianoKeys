@@ -3,15 +3,16 @@
 void random_note_played(int nb, char **soundtab)
 {
     int max_rand = 0, random = 0;
-    char *sound = NULL;
+    char *sound = NULL, *temp;
     for (;soundtab[max_rand] != NULL; max_rand++);
     random = rand() % max_rand;
-    sound = my_strcat("ressources\\sound\\", soundtab[random]);
-    sound = my_strcat(sound, ".WAV");
+    temp = my_strcat("ressources\\sound\\", soundtab[random]);
+    sound = my_strcat(temp, ".WAV");
+    free (temp);
     PlaySound(NULL, NULL, 0);
     PlaySound(sound, NULL, SND_NOSTOP || SND_ASYNC);
     free_tab(soundtab);
-    free(sound);
+    free (sound);
 }
 
 void read_file(int nb, char *str)
@@ -43,15 +44,17 @@ int open_file(int nb)
     repo = opendir("ressources/sound");
     char *str = NULL;
     while ((sound = readdir(repo)) != NULL) {
-        str = sound->d_name;
+        str = my_strdup(sound->d_name);
         if (strcmp("all_note.txt", str) == 0) {
             o++;
             break;
         }
+        free (str);
     }
     if (o == 0 || o > 1)
         return (84);
     free (repo);
     read_file(nb, str);
+    free (str);
     return (0);
 }
