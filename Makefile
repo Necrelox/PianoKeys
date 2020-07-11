@@ -5,6 +5,7 @@ SRC =	src/main.c	\
 		src/piano/minilib/my_strlen.c	\
 		src/piano/minilib/my_strtab.c	\
 		src/piano/minilib/my_strdup.c	\
+		src/piano/log/create_log_file.c	\
 		src/piano/key/get_keys.c	\
 		src/piano/sound/out_sound.c	\
 

@@ -26,6 +26,7 @@ int get_keys(void)
             return (84);
         out++;
         out == 91 ? out = 65 :0;
+        // recup_and_set_key(out);
     }
     return (0);
 }
