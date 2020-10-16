@@ -20,5 +20,5 @@ ESPACE
 
 ## Informations
 Si vous souhaitez des modifications, ajouts, ou que vous trouvez un bug n'hésitez pas à me contacter
-Necrelox#1584 sur Discord
+Necrelox#0040 sur Discord
 
